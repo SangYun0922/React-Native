@@ -10,7 +10,7 @@
 
 ![리액트네이티브3](https://user-images.githubusercontent.com/74143534/150121670-7fef1367-6108-4719-ad0c-b5bf1cec044c.JPG)
 
-# React-Natice셋업 (Mac)
+# React-Native셋업 (Mac)
 ### 1.Xcode 명령줄 도구 설치
 Homebrew에는 Apple Xcode의 Xcode 명령줄 도구가 필요합니다.
 ```
