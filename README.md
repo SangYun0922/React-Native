@@ -75,5 +75,75 @@ brew install cocoapods
 #존재한다면 아래 명령어를 실행합니다.
 pod install
 ```
+### Android 실행 및 TroubleShooting
+**먼저, 안드로이드 기반으로 제작하기 위해서는, 안드로이드 스튜디오 설치가 우선적으로 필요합니다.**</br>
+안드로이드 스튜디오 설치가 끝났다면, 안드로이드 스튜디오를 만든 프로젝트를 target으로 삼아 open해줍니다.</br>
+그후, 하위폴더중 android폴더에 존재하는 build.gradle파일을 확인합니다.</br>
+그중, buildscript부분을 확인해줍니다.
+```
+...
+buildscript {
+    ext {
+        buildToolsVersion = "30.0.2"
+        minSdkVersion = 21
+        compileSdkVersion = 30
+        targetSdkVersion = 30
+        ndkVersion = "21.4.7075529"
+    }
+...
+```
+targetSdkVersion = 30이므로, 버전30의 sdk를 설치해주어야 합니다.</br>
+mac기준으로 상단 네비게이션 바에서 Tools - Android - SDK Manager에서 API level 30버전의 안드로이드 플랫폼을 선택하여 설치해줍니다.</br>
+SDK 설치가 완료되었다면, **환경변수**를 설정 해줘야합니다.
+```
+brew install cocoapods
+```
+```
+#자신이 만든 react-native 프로젝트 폴더의 하위 폴더인 ios로 이동합니다.
+#해당 폴더에 Podfile이 존재하는지 확인합니다.
+#존재한다면 아래 명령어를 실행합니다.
+pod install
+```
+#현재, react-native와 android 연동에서 이슈
+```
+...
+error Failed to launch emulator. Reason: No emulators found as an output of `emulator -list-avds`.
+warn Please launch an emulator manually or connect a device. Otherwise app may fail to launch.
+info Installing the app...
 
+FAILURE: Build failed with an exception.
 
+* What went wrong:
+Could not determine the dependencies of task ':app:compileDebugJavaWithJavac'.
+> SDK location not found. Define location with an ANDROID_SDK_ROOT environment variable or by setting the sdk.dir path in your project's local properties file at '/Users/skwx50000/EndTalk/android/local.properties'.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 3s
+
+error Failed to install the app. Make sure you have the Android development environment set up: https://reactnative.dev/docs/environment-setup.
+Error: Command failed: ./gradlew app:installDebug -PreactNativeDevServerPort=8081
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not determine the dependencies of task ':app:compileDebugJavaWithJavac'.
+> SDK location not found. Define location with an ANDROID_SDK_ROOT environment variable or by setting the sdk.dir path in your project's local properties file at '/Users/skwx50000/EndTalk/android/local.properties'.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 3s
+
+    at makeError (/Users/skwx50000/EndTalk/node_modules/execa/index.js:174:9)
+    at /Users/skwx50000/EndTalk/node_modules/execa/index.js:278:16
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async runOnAllDevices (/Users/skwx50000/EndTalk/node_modules/@react-native-community/cli-platform-android/build/commands/runAndroid/runOnAllDevices.js:109:5)
+    at async Command.handleAction (/Users/skwx50000/EndTalk/node_modules/@react-native-community/cli/build/index.js:192:9)
+info Run CLI with --verbose flag for more details.
+```
