@@ -11,6 +11,9 @@
 ![리액트네이티브3](https://user-images.githubusercontent.com/74143534/150121670-7fef1367-6108-4719-ad0c-b5bf1cec044c.JPG)
 
 # React-Native셋업 (Mac)
+## Environments
+MacBook Pro : 13-inch, M1, 2020
+macOS : Big Sur (11.4.version)
 ### 1.Xcode 명령줄 도구 설치
 Homebrew에는 Apple Xcode의 Xcode 명령줄 도구가 필요합니다.
 ```
@@ -65,7 +68,6 @@ fatal error: 'React/RCTBridgeDelegate.h' file not found 해당 에러가 발생�
 아래 명령어들을 순차적으로 실행시켜 줍니다.
 ```
 brew install cocoapods
-
 ```
 ```
 #자신이 만든 react-native 프로젝트 폴더의 하위 폴더인 ios로 이동합니다.
