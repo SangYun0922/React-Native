@@ -38,7 +38,7 @@ brew install watchman
 ```
  react-native init [생성 할 프로젝트 명]
 ```
-### TroubleShooting
+### 실행TroubleShooting
 만약 react-native init [생성 할 프로젝트 명]를 입력해도, </br>
 zsh: command not found: react-native </br>
 위와 같은 명령어가 발생한다면?
@@ -54,3 +54,24 @@ export PATH=${PATH}:[글로벌 패스] #글로벌 패스를 아래 코드처럼 
 sudo npm install -g [library-name] #앞에 sudo를 붙이자.
 
 ```
+### iOS 실행 및 TroubleShooting
+Xcode가 있다면 다음 명령만으로 프로젝트를 실행할 수 있습니다.</br>
+명령은 프로젝트의 루트(TestProject/)로 이동해서 실행하셔야 합니다.(첫 빌드는 10분 이내의 시간이 약간 소요될 수 있습니다.)
+```
+react-native run-ios
+```
+만약,</br>
+fatal error: 'React/RCTBridgeDelegate.h' file not found 해당 에러가 발생한다면? </br>
+아래 명령어들을 순차적으로 실행시켜 줍니다.
+```
+brew install cocoapods
+
+```
+```
+#자신이 만든 react-native 프로젝트 폴더의 하위 폴더인 ios로 이동합니다.
+#해당 폴더에 Podfile이 존재하는지 확인합니다.
+#존재한다면 아래 명령어를 실행합니다.
+pod install
+```
+
+
