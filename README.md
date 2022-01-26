@@ -104,7 +104,7 @@ brew install cocoapods
 #존재한다면 아래 명령어를 실행합니다.
 pod install
 ```
-#현재, react-native와 android 연동에서 이슈
+#현재, react-native와 android 연동에서 이슈해결중...
 ```
 ...
 error Failed to launch emulator. Reason: No emulators found as an output of `emulator -list-avds`.
