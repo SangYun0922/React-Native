@@ -1,0 +1,81 @@
+{
+  "codes": [
+    {
+      "id": 1,
+      "value": "J",
+      "desc": "Journal"
+    },
+    {
+      "id": 2,
+      "value": "D",
+      "desc": "ToDo"
+    }
+  ],
+  "boards": [
+    {
+      "id": 1,
+      "name": "일기",
+      "insertDate": 1617351293396,
+      "updateDate": 1617351293396,
+      "code": "J"
+    },
+    {
+      "id": 2,
+      "name": "할일",
+      "insertDate": 1617351448578,
+      "updateDate": 1617351448578,
+      "code": "D"
+    },
+    {
+      "name": "고양이",
+      "id": 3,
+      "insertDate": 1651460464200,
+      "updateDate": 1651460464200
+    },
+    {
+      "name": "금쪽이 등록",
+      "id": 4,
+      "insertDate": 1651476430439,
+      "updateDate": 1651476430439
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "오늘 명륜진사갈비감",
+      "content": "갈비맛있음",
+      "views": 19,
+      "insertDate": 1617351293396,
+      "updateDate": 1651465366572,
+      "boardId": 1
+    },
+    {
+      "id": 2,
+      "title": "내일 뭐 먹을지 정해야 함",
+      "content": "한식 중식 일식",
+      "views": 6,
+      "insertDate": 1617351448578,
+      "updateDate": 1651474063185,
+      "boardId": 2
+    },
+    {
+      "boardId": "1",
+      "title": "안녕",
+      "content": "ㄴㅇㄹㄴ\n",
+      "id": 3,
+      "views": 2,
+      "insertDate": 1651460335324,
+      "updateDate": 1651460340249
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "content": "내일은 뭐 먹지",
+      "insertDate": 1617351448578,
+      "updateDate": 1617351448578,
+      "boardId": 2,
+      "articleId": 2
+    }
+  ]
+}
