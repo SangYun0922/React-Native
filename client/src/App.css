@@ -1,0 +1,19 @@
+.container {
+    flex: 1;
+    border: 3px black solid;
+    border-radius: 1rem;
+    background-color: #e6e3da;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+
+.title {
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    background-image: url("./assets/logo.png");
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+}

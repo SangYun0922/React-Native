@@ -1,0 +1,30 @@
+.header {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: aqua;
+}
+
+.sidebar {
+    display: inline-block;
+    height: calc(100% - 200px);
+    width: 200px;
+    border: 3px black solid;
+    border-radius: 1rem;
+    margin-left: 25px;
+    /* background-color: blueviolet; */
+}
+
+.content {
+    display: inline-block;
+    height: 100%;
+    width: calc(100% - 400px);
+    border: 3px black solid;
+    border-radius: 1rem;
+    margin-left: 50px;
+    background-color: aquamarine;
+}
+
+.hide {
+    display: none;
+}
